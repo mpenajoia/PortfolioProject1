@@ -50,7 +50,6 @@ N/a
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Animated arrow user instruction | L | 2hr | -hr | hr |
 | Swipeable slider on mobile | M | 3hr | hr |
 | interactive google map in contact  | L | 2hr | hr |
 | Parallax background | L | 4hr | -hr | hr |
