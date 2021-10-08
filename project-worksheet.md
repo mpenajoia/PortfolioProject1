@@ -44,6 +44,7 @@ N/a
 | Contact Form | H | 1hr | hr |  
 | Social Icons | L | 1.5hr|  hr | 
 | Aesthetics | H | 3hr | hr |
+|jQuery animation on Arrow | H | 3hr | hr |
 | Total | H | 15.5hrs| hrs |
 
 #### PostMVP
