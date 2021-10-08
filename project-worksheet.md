@@ -18,7 +18,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+The goal of this project is to use HTML, CSS, JS, and jQuery to build a mobile focused portfolio to showcase projects/websites I've built (or will build). The final product will be simple, aesthetically pleasing, intuitive, and adaptable to any screen size. I intend to display all content ona single page layout feature some minimal animation and a image slider/carousel to display projects in at least one of the media query sizes. 
 
 ## Google Sheet
 
