@@ -6,17 +6,31 @@
 
 body {
     font-family: 'Heebo', sans-serif;
+    /* background: #335145; */
+    /* background:#F7FFF7; */
+    position: relative;
 }
+#arrow {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    opacity: .1;
+    width:70px;
+}
+
 
 #main-content {
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    grid-gap: 50px;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 section {
     text-align: center;
+    /* background: #ffffff; */
     
 }
 
@@ -40,6 +54,39 @@ h2 {
     font-weight: 700;
     font-size: 3em;
     letter-spacing: -2px;
+}
+#contact {
+    display: grid;
+}
+
+input, textarea {
+    border: none;
+    /* background: #eeeeee; */
+    background:#FFE66D;
+    padding: 10px;
+    font-size: 1em;
+}
+#contact-form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-gap: 10px;
+    padding: 10px 30px;
+    
+}
+
+#message-area {
+    /* Needed this to change font inside text area to match rest of page */
+    font-family: 'Heebo', sans-serif;
+}
+#send-button {
+    justify-self: center;
+    width: 50%;
+    background: #000000;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1em;
+    border: none;
+    padding: 10px 20px;
 }
 
 footer {
@@ -67,14 +114,14 @@ footer ul li {
 
 .social {
     display:block;
-    margin: 10px auto;
+    margin: 8px auto;
     width: 50%;
 }
 
 footer p {
     color: #ffffff;
     text-align: center;
-    border-top: 1px solid #ffffff;
+    /* border-top: 1px solid #ffffff; */
     padding: 10px 0;
 }
 /* Tablet */

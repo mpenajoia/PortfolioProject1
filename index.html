@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <img id="arrow" src="/img/arrow_down.png" alt="Arrow">
     <div id="main-content">
         <section id="top-section">
             <h1>Marco Silva</h1>
@@ -38,15 +39,22 @@
         </section>
         <section id="contact">
             <h2>Contact</h2>
+            <!-- <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=90042&key=AIzaSyAazdRR6Ed0aoCjdfGnoV1x7S-1F8h6CRw"></iframe> -->
             <div id="map">Google map goes here</div>
-            <form action="">Contact form goes here</form>
+            <p>Contact form goes here</p>    
+            <form id="contact-form">
+                <input name="Name" placeholder="Your Name">
+                <input name="Email" placeholder="Your Email">
+                <textarea name="Message" id="message-area" placeholder="Your Message"></textarea>
+            </form>
+            <button id="send-button" type="submit">Send</button>
         </section>
 
     </div>
     <footer>
         <ul>
-            <li><a href="https://www.instagram.com/marcopenajoia"><img class="social" src="/img/1161954_instagram_icon (1).png" alt="Instagram Icon"></a></li>
-            <li><a href="http://www.linkedin.com/in/mpenajoia"><img class="social" src="/img/104452_linkedin_icon (1).png" alt="Linked In Icon"></a></li>
+            <li><a href="https://www.instagram.com/marcopenajoia"><img class="social" src="/img/1161954_instagram_icon.png" alt="Instagram Icon"></a></li>
+            <li><a href="http://www.linkedin.com/in/mpenajoia"><img class="social" src="/img/104452_linkedin_icon.png" alt="Linked In Icon"></a></li>
         </ul>
         <p class="copy">© 2021 All them rights reserved and what not.</p>
     </footer>
