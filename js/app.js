@@ -82,18 +82,26 @@ function sendForm (){
     const $name = $('#contact-name').val();
     const $email = $('#contact-email').val();
     const $message = $('#message-area').val();
-    const $blank404 = $('#contact-form').prepend($('<p>').css({'color': 'red'}).text('Please fill out all fields.'))
-    const $success = $('#contact-form').append($('<p>').text('Got it, thanks.'))
-    
-    if($name === false && $email === false && $message === false){
-        $blank404;
+    const $feedback = $('#feedback');
+    const $blank404 = $('<p>').css({'color': 'red'}).text('Please fill out all fields.');
+    const $success = $('<p>').text('Got it, thanks.');
+   
+    if(!$name && !$email && !$message){
+        // const $blank404 = $feedback.prepend($('<p>').css({'color': 'red'}).text('Please fill out all fields.'))
+        // $feedback.text("Please fill out all fields.");
+        $feedback.prepend($blank404)
+
     }else{
+        const $serial = $('#contact-form').serializeArray()
+        console.log("String: " + Object.keys($serial[0]));
+        console.log("String: " + $serial[0].name)
         $.ajax({
             url: 'https://api.apispreadsheets.com/data/19236/',
             type: 'post',
             data:$('#contact-form').serializeArray(),
             success: function(){
-                $success.fadeOut('slow')
+                // $feedback.prepend($success);
+                // $success.fadeOut('slow')
             },
             error: function(){
                 $('#contact-form').prepend($('<p>').text('Failed to send, try again.'))
@@ -111,17 +119,36 @@ const $win = $(window);
 
 
 
+// $win.on('scroll', function(){
+//     const $top = $win.scrollTop();
+//     // console.log($top);
+//     let topArrowVis = false;
+//     if(!topArrowVis && $top >= 175){
+//         $upArrow.fadeTo(600, 0.1, function(){});
+//         topArrowVis = true;
+//     }
+//     if(topArrowVis && $top < 175){
+//         $upArrow.fadeTo(600, 0, function(){});
+//         topArrowVis = false;
+//     }
+
+// })
+
+let topArrowVis = false;
 $win.on('scroll', function(){
     const $top = $win.scrollTop();
     // console.log($top);
-    if($top >= 175 && $top < 1248){
-        $upArrow.fadeTo(800, 0.1, function(){});
-    }else if($top >= 1248){
-        $downArrow.fadeTo(600, 0.0, function(){});
-    }else{
+
+    if(!topArrowVis && $top >= 175){
+        $upArrow.fadeTo(600, 0.1, function(){});
+        topArrowVis = true;
+    }
+    if(topArrowVis && $top < 175){
         $upArrow.fadeTo(600, 0, function(){});
+        topArrowVis = false;
     }
 
 })
+
 
 

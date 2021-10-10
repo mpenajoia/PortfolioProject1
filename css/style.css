@@ -85,6 +85,21 @@ h2 {
     font-size: 3em;
     letter-spacing: -2px;
 }
+
+/* #slider {
+}
+
+.pro1 {
+    background-image: url('../img/MPimg.jpg');
+    background-size: 100% 100%;
+
+} */
+
+/* .project-images {
+    width: 100%;
+} */
+
+
 #contact {
     display: grid;
 }
