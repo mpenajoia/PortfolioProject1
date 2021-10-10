@@ -50,11 +50,11 @@
             <div id="map">Google map goes here</div>
             <!-- <p>Contact form goes here</p>     -->
             <form id="contact-form">
-                <input name="Name" placeholder="Your Name">
-                <input name="Email" placeholder="Your Email">
+                <input id ="contact-name" name="Name" placeholder="Your Name">
+                <input id="contact-email" name="Email" placeholder="Your Email">
                 <textarea name="Message" id="message-area" placeholder="Your Message"></textarea>
             </form>
-            <button id="send-button" type="submit">Send</button>
+            <button id="send-button" type="submit" onclick="sendForm()" >Send</button>
         </section>
 
     </div>

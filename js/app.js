@@ -28,9 +28,6 @@ downArrowBounce();
 // };
 // upArrowAppear().on('scroll')
 
-
-
-
 /*
 // mirrored functions from above with opposite settings for the up arrow
 function upArrowDown() {
@@ -75,7 +72,33 @@ $(window).scroll(function(){
 //     $('#arrow-up').fadeOut(400)
 // }
 
+// $(window).scrollTop(20)
 
+
+
+function sendForm (){
+    const $name = $('#contact-name').val();
+    const $email = $('#contact-email').val();
+    const $message = $('#message-area').val();
+    const $blank404 = $('#contact-form').prepend($('<p>').css({'color': 'red'}).text('Please fill out all fields.'))
+    const $success = $('#contact-form').append($('<p>').text('Got it, thanks.'))
+    
+    if($name === false && $email === false && $message === false){
+        $blank404;
+    }else{
+        $.ajax({
+            url: 'https://api.apispreadsheets.com/data/19236/',
+            type: 'post',
+            data:$('#contact-form').serializeArray(),
+            success: function(){
+                $success.fadeOut('slow')
+            },
+            error: function(){
+                $('#contact-form').prepend($('<p>').text('Failed to send, try again.'))
+            }
+        });
+    }
+}
 
 
 
