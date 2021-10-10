@@ -10,14 +10,44 @@ body {
     /* background:#F7FFF7; */
     position: relative;
 }
-#arrow {
+#arrow-down {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
+    right: 40px;
+    bottom: 30px;
     opacity: .1;
-    width:70px;
+    width:60px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+#arrow-up {
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    opacity: .1;
+    width:60px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
 }
 
+.bounce {
+    animation-name: bounce;
+    animation-timing-function: linear;
+}
+@keyframes bounce {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(-10px);}
+    100% { transform: translateY(0);}
+}
+
+.bounce-up {
+    animation-name: bounce-up;
+    animation-timing-function: linear;
+}
+@keyframes bounce-up {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(10px);}
+    100% { transform: translateY(0);}
+}
 
 #main-content {
     display:grid;
@@ -57,6 +87,10 @@ h2 {
 }
 #contact {
     display: grid;
+}
+
+#map {
+    display: none;
 }
 
 input, textarea {
