@@ -57,7 +57,9 @@ N/a
 | Total | H | 20hrs| hrs |
 
 ## Additional Libraries
-N/a 
+- [Iconfinder](http://iconfinder.com) for all iconography
+
+- [Google API](https://lovespreadsheets.medium.com/save-web-html-form-data-to-google-sheets-47e48f7517e6) Contact form
 
 ## Code Snippet
 

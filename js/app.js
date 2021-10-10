@@ -74,8 +74,10 @@ $(window).scroll(function(){
 
 // $(window).scrollTop(20)
 
+//PREVIOUS ATTEMPT AT JQUERY ANIMATIONS ABOVE - SCRAPPED
 
 
+// Contact Form Below
 function sendForm (){
     const $name = $('#contact-name').val();
     const $email = $('#contact-email').val();
@@ -101,5 +103,25 @@ function sendForm (){
 }
 
 
+const $downArrow = $('#arrow-down');
+const $upArrow = $('#arrow-up');
+const $upArrowOn = $upArrow.css({'opacity': .1});
+const $upArrowOff = $upArrow.css({'opacity': 0});
+const $win = $(window);
+
+
+
+$win.on('scroll', function(){
+    const $top = $win.scrollTop();
+    // console.log($top);
+    if($top >= 175 && $top < 1248){
+        $upArrow.fadeTo(800, 0.1, function(){});
+    }else if($top >= 1248){
+        $downArrow.fadeTo(600, 0.0, function(){});
+    }else{
+        $upArrow.fadeTo(600, 0, function(){});
+    }
+
+})
 
 

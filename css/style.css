@@ -12,8 +12,8 @@ body {
 }
 #arrow-down {
     position: fixed;
-    right: 40px;
-    bottom: 30px;
+    right: 20px;
+    bottom: 20px;
     opacity: .1;
     width:60px;
     animation-duration: 1.5s;
@@ -21,9 +21,9 @@ body {
 }
 #arrow-up {
     position: fixed;
-    right: 40px;
-    bottom: 100px;
-    opacity: 0;
+    right: 20px;
+    bottom: 90px;
+    opacity: .1;
     width:60px;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
@@ -160,7 +160,7 @@ footer p {
 }
 /* Tablet */
 @media only screen and (min-width: 768px) {
-    
+
 }
 
 
