@@ -100,6 +100,7 @@ function sendForm (){
             type: 'post',
             data:$('#contact-form').serializeArray(),
             success: function(){
+
                 // $feedback.prepend($success);
                 // $success.fadeOut('slow')
             },
@@ -148,7 +149,18 @@ $win.on('scroll', function(){
         topArrowVis = false;
     }
 
-})
+});
 
 
 
+//Google Map API integration
+//function to initialize map
+function initMap() {
+    // location of my area
+    const location = {lat: 34.112, lng: -118.193};
+    // variable to 'put' map on DOM
+    const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: location
+    });
+}
