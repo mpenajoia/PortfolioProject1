@@ -62,7 +62,7 @@ body {
 
 section {
     text-align: center;
-    background: #ffffff;
+    /* background: #ffffff; */
     height: 100%;
     padding: 20px 0;
        
@@ -88,6 +88,10 @@ section:first-of-type {
     letter-spacing: -4px;
     line-height: 60px;
     
+}
+
+#tagline {
+    display:none;
 }
 
 h2 {
@@ -281,6 +285,45 @@ footer p {
 }
 /* Tablet */
 @media only screen and (min-width: 768px) {
+    
+    #main-content {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr 3fr 3fr;
+        grid-gap: 0px;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    section {
+        text-align: center;
+        height: auto;
+        padding: 20px 0;
+        position: relative;
+           
+    }
+    #top-section {
+        justify-self: center;
+        align-self: center;
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        margin: 50px auto 0 auto;
+        
+    }
+    #tagline {
+        display:inline-block;
+        position:absolute;
+        right: 0;
+        font-weight: 900;
+        font-size: 2em;
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        
+    }
+    #map {
+        width: 90%;
+        margin: 0 auto;
+    }
+
 
 }
 
