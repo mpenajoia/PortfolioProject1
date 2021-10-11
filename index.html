@@ -14,6 +14,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div>
     <img id="arrow-up" class="bounce-up" src="/img/arrow_up.png" alt="Up arrow">
     <img id="arrow-down" class="bounce" src="/img/arrow_down.png" alt="Down arrow">
     <div id="main-content">
@@ -30,19 +31,25 @@
         <section id="projects">
             <h2>Projects</h2>
             <div id="slider">
-                <article class="pro1">
-                    <h3>Project #1</h3>
-                    <!-- <img class="project-images" src="/img/MPimg.jpg" alt="MP Portfolio"> -->
-                    <a href="#" class="more-button">More</a>
-                </article>
-                <article class="pro2">
-                    <h3>Project #2</h3>
-                    <a href="#" class="more-button">More</a>
-                </article>
-                <article class="pro3">
-                    <h3>Project #3</h3>
-                    <a href="#" class="more-button">More</a>
-                </article>
+                <div id="prev"></div>
+                <div id="next"></div>
+                <div class="inside">
+                    <article class="pro1">
+                        <h3>Photography Portfolio</h3>
+                        <a href="http://marcopenajoia.com" class="more-button">More</a>
+                        <img class="project-images" src="/img/MPimg.jpg" alt="MP Portfolio">
+                    </article>
+                    <article class="pro2" id="show-me">
+                        <h3>Project Page</h3>
+                        <a href="http://urbandestroyer.com" class="more-button">More</a>
+                        <img class="project-images" src="/img/UDimg.jpg" alt="MP Portfolio">
+                    </article>
+                    <article class="pro3">
+                        <h3>Fashion Blog</h3>
+                        <a href="#" class="more-button">More</a>
+                        <img class="project-images" src="/img/SLimg.jpg" alt="MP Portfolio">
+                    </article>
+                </div>
             </div>
         </section>
         <section id="contact">
@@ -59,6 +66,7 @@
             <button id="send-button" type="submit" onclick="sendForm()" >Send</button>
         </section>
 
+    </div>
     </div>
     <footer>
         <ul>

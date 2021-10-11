@@ -84,28 +84,29 @@ function sendForm (){
     const $message = $('#message-area').val();
     const $feedback = $('#feedback');
     const $blank404 = $('<p>').css({'color': 'red'}).text('Please fill out all fields.');
-    const $success = $('<p>').text('Got it, thanks.');
-   
+    // const $success = $('<p>').text('Got it, thanks.');
+    const $fadeAway = $feedback.fadeOut(1500);
+
     if(!$name && !$email && !$message){
         // const $blank404 = $feedback.prepend($('<p>').css({'color': 'red'}).text('Please fill out all fields.'))
         // $feedback.text("Please fill out all fields.");
         $feedback.prepend($blank404)
+        $fadeAway
 
     }else{
         const $serial = $('#contact-form').serializeArray()
-        console.log("String: " + Object.keys($serial[0]));
-        console.log("String: " + $serial[0].name)
         $.ajax({
             url: 'https://api.apispreadsheets.com/data/19236/',
             type: 'post',
             data:$('#contact-form').serializeArray(),
             success: function(){
-
-                // $feedback.prepend($success);
-                // $success.fadeOut('slow')
+                // const $success = $('<p>').text('Got it, thanks.');
+                // $feedback.append($success)
+                // $fadeAway
+                // alert('Got it, thanks.')
             },
             error: function(){
-                $('#contact-form').prepend($('<p>').text('Failed to send, try again.'))
+                $feedback.prepend($('<p>').text('This mailbox is now full, try again later.'))
             }
         });
     }
@@ -135,21 +136,49 @@ const $win = $(window);
 
 // })
 
+// had to declare this variable out side the function's scope for this to work. Thanks to assistance from Jackson
 let topArrowVis = false;
+// function that is evoked when the window is scrolled
 $win.on('scroll', function(){
     const $top = $win.scrollTop();
     // console.log($top);
 
-    if(!topArrowVis && $top >= 175){
+    if(!topArrowVis && $top >= 190){
         $upArrow.fadeTo(600, 0.1, function(){});
         topArrowVis = true;
     }
-    if(topArrowVis && $top < 175){
+    if(topArrowVis && $top < 190){
         $upArrow.fadeTo(600, 0, function(){});
         topArrowVis = false;
     }
+    if(topArrowVis && $top >= 1800){
+        $upArrow.css('bottom', '130px')
+    }else{
+        $upArrow.css('bottom', '90px')
+    }
 
 });
+
+
+
+let downArrowVis = true;
+// function that is evoked when the window is scrolled
+$win.on('scroll', function(){
+    const $top = $win.scrollTop();
+    // console.log($top);
+
+    if(!downArrowVis && $top >= 1650){
+        $downArrow.fadeTo(600, 0, function(){});
+        downArrowVis = true;
+    }
+    if(downArrowVis && $top < 1650){
+        $downArrow.fadeTo(600, 0.1, function(){});
+        downArrowVis = false;
+    }
+
+});
+
+
 
 
 
@@ -164,3 +193,28 @@ function initMap() {
         center: location
     });
 }
+
+
+// slider controls
+function nextProj () {
+    $('#next').on('click', function (){
+        let $showMe = $('#show-me');
+        let $nextImg = $showMe.next();
+
+        if($nextImg.length){
+            $showMe.removeAttr('id').css('z-index', -50);
+            $nextImg.attr('id', 'show-me').css('z-index', 50)
+        }
+        
+    });
+    $('#prev').on('click', function (){
+        let $showMe = $('#show-me');
+        let $prevImg = $showMe.prev();
+
+        if($prevImg.length){
+            $showMe.removeAttr('id').css('z-index', -50);
+            $prevImg.attr('id', 'show-me').css('z-index', 50)
+        }
+    })
+}
+nextProj();

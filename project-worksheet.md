@@ -27,7 +27,7 @@ The goal of this project is to use HTML, CSS, JS, and jQuery to build a mobile f
 
 ## Google Sheet
 
-N/a
+- [Goggle Contact Sheet](https://docs.google.com/spreadsheets/d/1HYuagmj-TDEW8Wkjps2L_PZiPThWU0pAnnV9GLcS2p4/edit?usp=sharing)
 
 ## Wireframes
 
@@ -74,4 +74,5 @@ N/a
 ## Issues and Resolutions
  N/a
 
+## Resources
 
