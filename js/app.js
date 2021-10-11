@@ -84,7 +84,7 @@ function sendForm (){
     const $message = $('#message-area').val();
     const $feedback = $('#feedback');
     const $blank404 = $('<p>').css({'color': 'red'}).text('Please fill out all fields.');
-    // const $success = $('<p>').text('Got it, thanks.');
+    const $success = $('<p>').text('Got it, thanks.');
     const $fadeAway = $feedback.fadeOut(1500);
 
     if(!$name && !$email && !$message){
@@ -101,7 +101,7 @@ function sendForm (){
             data:$('#contact-form').serializeArray(),
             success: function(){
                 // const $success = $('<p>').text('Got it, thanks.');
-                // $feedback.append($success)
+                $feedback.append($success)
                 // $fadeAway
                 // alert('Got it, thanks.')
             },
@@ -143,15 +143,15 @@ $win.on('scroll', function(){
     const $top = $win.scrollTop();
     // console.log($top);
 
-    if(!topArrowVis && $top >= 190){
+    if(!topArrowVis && $top >= 100){
         $upArrow.fadeTo(600, 0.1, function(){});
         topArrowVis = true;
     }
-    if(topArrowVis && $top < 190){
+    if(topArrowVis && $top < 100){
         $upArrow.fadeTo(600, 0, function(){});
         topArrowVis = false;
     }
-    if(topArrowVis && $top >= 1800){
+    if(topArrowVis && $top >= 1700){
         $upArrow.css('bottom', '130px')
     }else{
         $upArrow.css('bottom', '90px')
