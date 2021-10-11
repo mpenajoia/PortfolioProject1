@@ -78,20 +78,22 @@ $(window).scroll(function(){
 
 
 // Contact Form Below
-function sendForm (){
+function sendForm (event){
+    event.preventDefault();
     const $name = $('#contact-name').val();
     const $email = $('#contact-email').val();
     const $message = $('#message-area').val();
     const $feedback = $('#feedback');
     const $blank404 = $('<p>').css({'color': 'red'}).text('Please fill out all fields.');
     const $success = $('<p>').text('Got it, thanks.');
-    const $fadeAway = $feedback.fadeOut(1500);
+    // const $fadeAway = $feedback.fadeOut(1500);
 
     if(!$name && !$email && !$message){
         // const $blank404 = $feedback.prepend($('<p>').css({'color': 'red'}).text('Please fill out all fields.'))
         // $feedback.text("Please fill out all fields.");
-        $feedback.prepend($blank404)
-        $fadeAway
+        $feedback.prepend($blank404);
+        $feedback.fadeOut(2000);
+        // $fadeAway
 
     }else{
         const $serial = $('#contact-form').serializeArray()
@@ -101,7 +103,9 @@ function sendForm (){
             data:$('#contact-form').serializeArray(),
             success: function(){
                 // const $success = $('<p>').text('Got it, thanks.');
-                $feedback.append($success)
+                $('#feedback').prepend($success);
+                $feedback.fadeOut(2000);
+                
                 // $fadeAway
                 // alert('Got it, thanks.')
             },
@@ -167,11 +171,11 @@ $win.on('scroll', function(){
     const $top = $win.scrollTop();
     // console.log($top);
 
-    if(!downArrowVis && $top >= 1650){
+    if(!downArrowVis && $top >= 1600){
         $downArrow.fadeTo(600, 0, function(){});
         downArrowVis = true;
     }
-    if(downArrowVis && $top < 1650){
+    if(downArrowVis && $top < 1600){
         $downArrow.fadeTo(600, 0.1, function(){});
         downArrowVis = false;
     }

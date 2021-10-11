@@ -240,6 +240,10 @@ input, textarea {
     height: 50%;
 }
 
+#feedback {
+    
+}
+
 footer {
     display:flex;
     flex-flow:column wrap;
