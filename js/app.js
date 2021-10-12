@@ -53,7 +53,7 @@ $win.on("scroll", function () {
     $upArrow.fadeTo(600, 0, function () {});
     topArrowVis = false;
   }
-  if (topArrowVis && $top >= 1850) {
+  if (topArrowVis && $top >= 1750) {
     $upArrow.css("bottom", "130px");
   } else {
     $upArrow.css("bottom", "90px");
