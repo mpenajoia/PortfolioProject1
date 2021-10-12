@@ -1,90 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
-    <!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-     -->
-    <link rel="stylesheet" href="/css/style.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-    <img id="arrow-up" class="bounce-up" src="/img/arrow_up.png" alt="Up arrow">
-    <img id="arrow-down" class="bounce" src="/img/arrow_down.png" alt="Down arrow">
-    <div id="main-content">
+      <img
+        id="arrow-up"
+        class="bounce-up"
+        src="/img/arrow_up.png"
+        alt="Up arrow"
+      />
+      <img
+        id="arrow-down"
+        class="bounce"
+        src="/img/arrow_down.png"
+        alt="Down arrow"
+      />
+      <div id="main-content">
         <section id="top-section">
-            <h1>Marco Silva</h1>
-            <p id="tagline">developer</p>
+          <h1>Marco Silva</h1>
+          <p id="tagline">developer</p>
         </section>
         <section id="about">
-            <h2>About</h2>
-            <article id="about-me">I'm currently a student enrolled in General Assembly's SEIR bootcamp program.</article>
+          <h2>About</h2>
+          <article id="about-me">
+            I'm currently a student enrolled in General Assembly's SEIR bootcamp
+            program.
+          </article>
         </section>
         <section id="projects">
-            <h2>Projects</h2>
-            <div id="slider">
-                <div id="prev" class="left-bounce"><img src="/img/arrow_left.png" alt="Left Arrow"></div>
-                <div id="next" class="right-bounce"><img src="/img/arrow_right.png" alt="Right Arrow"></div>
-                <div class="inside">
-                    <article class="pro1">
-                        <img class="project-images" src="/img/mobile-MPimg.jpg" alt="MP Portfolio">
-                        <div class="project-menu">    
-                            <h3>Photography Portfolio</h3>
-                            <p>KOKEN CMS | PHOTOGRAPHY</p>
-                            <a href="http://marcopenajoia.com" class="more-button">Demo</a>
-                        </div>
-                    </article>
-                    <article class="pro2" id="show-me">
-                        <img class="project-images" src="/img/mobile-UDimg.jpg" alt="MP Portfolio">
-                        <div class="project-menu">    
-                            <h3>Project V1</h3>
-                            <p>WORDPRESS | PHOTOGRAPHY | BUILD</p>
-                            <a href="http://urbandestroyer.com" class="more-button">Demo</a>
-                        </div>
-                    </article>
-                    <article class="pro3">
-                        <img class="project-images" src="/img/mobile-SLimg.jpg" alt="MP Portfolio">
-                        <div class="project-menu">    
-                            <h3>Fashion Blog</h3>
-                            <p>HTML | CSS</p>
-                            <a href="#" class="more-button">Demo</a>
-                        </div>
-                    </article>
-                </div>
+          <h2>Projects</h2>
+          <div id="slider">
+            <div id="prev" class="left-bounce">
+              <img src="/img/arrow_left.png" alt="Left Arrow" />
             </div>
+            <div id="next" class="right-bounce">
+              <img src="/img/arrow_right.png" alt="Right Arrow" />
+            </div>
+            <div class="inside">
+              <article class="pro1">
+                <img
+                  class="project-images"
+                  src="/img/mobile-MPimg.jpg"
+                  alt="MP Portfolio"
+                />
+                <div class="project-menu">
+                  <h3>Photography Portfolio</h3>
+                  <p>KOKEN CMS | PHOTOGRAPHY</p>
+                  <a href="http://marcopenajoia.com" class="more-button"
+                    >Demo</a
+                  >
+                </div>
+              </article>
+              <article class="pro2" id="show-me">
+                <img
+                  class="project-images"
+                  src="/img/mobile-UDimg.jpg"
+                  alt="MP Portfolio"
+                />
+                <div class="project-menu">
+                  <h3>Project V1</h3>
+                  <p>WORDPRESS | PHOTOGRAPHY | BUILD</p>
+                  <a href="http://urbandestroyer.com" class="more-button"
+                    >Demo</a
+                  >
+                </div>
+              </article>
+              <article class="pro3">
+                <img
+                  class="project-images"
+                  src="/img/mobile-SLimg.jpg"
+                  alt="MP Portfolio"
+                />
+                <div class="project-menu">
+                  <h3>Fashion Blog</h3>
+                  <p>HTML | CSS</p>
+                  <a href="#" class="more-button">Demo</a>
+                </div>
+              </article>
+            </div>
+          </div>
         </section>
         <section id="contact">
-            <h2>Contact</h2>
-            
-                <div id="map"></div>
-                <!-- <p>Contact form goes here</p>     -->
-                <form id="contact-form">
-                    <input id ="contact-name" name="Name" placeholder="Your Name">
-                    <input id="contact-email" name="Email" placeholder="Your Email">
-                    <textarea name="Message" id="message-area" placeholder="Your Message"></textarea>
-                </form>
-                <button id="send-button" type="submit" onclick="sendForm(event)" >Send</button>
-                <div id="feedback"></div>
-        </section>
+          <h2>Contact</h2>
 
-    </div>
+          <div id="map"></div>
+          <!-- <p>Contact form goes here</p>     -->
+          <form id="contact-form">
+            <input id="contact-name" name="Name" placeholder="Your Name" />
+            <input id="contact-email" name="Email" placeholder="Your Email" />
+            <textarea
+              name="Message"
+              id="message-area"
+              placeholder="Your Message"
+            ></textarea>
+          </form>
+          <button id="send-button" type="submit" onclick="sendForm(event)">
+            Send
+          </button>
+          <div id="feedback"></div>
+        </section>
+      </div>
     </div>
     <footer>
-        <ul>
-            <li><a href="https://www.instagram.com/marcopenajoia"><img class="social" src="/img/1161954_instagram_icon.png" alt="Instagram Icon"></a></li>
-            <li><a href="http://www.linkedin.com/in/mpenajoia"><img class="social" src="/img/104452_linkedin_icon.png" alt="Linked In Icon"></a></li>
-        </ul>
-        <p class="copy">© 2021 All them rights reserved and what not.</p>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/marcopenajoia"
+            ><img
+              class="social"
+              src="/img/1161954_instagram_icon.png"
+              alt="Instagram Icon"
+          /></a>
+        </li>
+        <li>
+          <a href="http://www.linkedin.com/in/mpenajoia"
+            ><img
+              class="social"
+              src="/img/104452_linkedin_icon.png"
+              alt="Linked In Icon"
+          /></a>
+        </li>
+      </ul>
+      <p class="copy">© 2021 All them rights reserved and what not.</p>
     </footer>
 
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAazdRR6Ed0aoCjdfGnoV1x7S-1F8h6CRw&callback=initMap"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAazdRR6Ed0aoCjdfGnoV1x7S-1F8h6CRw&callback=initMap"
+    ></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/js/app.js"></script>
-</body>
+  </body>
 </html>
