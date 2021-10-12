@@ -104,6 +104,9 @@ function sendForm (event){
             success: function(){
                 // const $success = $('<p>').text('Got it, thanks.');
                 $('#feedback').prepend($success);
+                $('#contact-name').val('');
+                $('#contact-email').val('');
+                $('#message-area').val('');
                 $feedback.fadeOut(2000);
                 
                 // $fadeAway
@@ -222,3 +225,12 @@ function nextProj () {
     })
 }
 nextProj();
+
+function tagLine () {
+    $('#tagline').delay(800).animate({
+        opacity: 1
+    }, 1500)
+}
+tagLine();
+
+

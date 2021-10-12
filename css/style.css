@@ -105,10 +105,6 @@ h2 {
     padding: 20px;
 }
 
-#projects {
-   
-}
-
  #slider {
     width: 100%;
     margin: 0 auto;
@@ -120,31 +116,51 @@ h2 {
 #prev {
     position: absolute;
     left: 0px;
-    width: 50px;
+    width: 60px;
     z-index: 100;
     top: 50%;
     transform: translate(0%, -50%);
-    opacity: .5;
+    opacity: .6;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
     
  }
  #prev img {
-     width: 80%;
+     width: 100%;
      
  }
- 
+ .left-bounce {
+    animation-name: left-bounce;
+    animation-timing-function: linear;
+}
+@keyframes left-bounce {
+    0% { transform: translateX(0);}
+    50% { transform: translateX(-5px);}
+    100% { transform: translateX(0);}
+} 
  #next {
     position: absolute;
     right: 0px;
-    width: 50px;
+    width: 60px;
     z-index: 100;
     top: 50%;
     transform: translate(0%, -50%);
-    opacity: .5;
+    opacity: .6;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
   }
   #next img {
-      width: 80%;
+      width: 100%;
   }
-
+  .right-bounce {
+    animation-name: right-bounce;
+    animation-timing-function: linear;
+}
+@keyframes right-bounce {
+    0% { transform: translateX(0px);}
+    50% { transform: translateX(5px);}
+    100% { transform: translateX(0px);}
+} 
 /* #prev {
    position: absolute;
    left: 0;
@@ -246,7 +262,7 @@ h3 {
 
 #contact {
     display: grid;
-    grid-template-rows: .5fr 1fr 1fr .5fr .1fr;
+    grid-template-rows: .3fr .7fr 1fr .2fr .1fr;
 }
 
 #contact h2 {
@@ -290,9 +306,6 @@ input, textarea {
     height: 50%;
 }
 
-#feedback {
-    
-}
 
 footer {
     display:flex;
@@ -360,6 +373,7 @@ footer p {
         display:inline-block;
         position:absolute;
         right: 0;
+        opacity: 0;
         font-weight: 900;
         font-size: 2em;
         -webkit-transform: rotate(-180deg);
@@ -383,6 +397,10 @@ footer p {
         font-size: 1.3em;
         padding: 10px 20px;
     }
+    #contact {
+        display: grid;
+        grid-template-rows: .5fr .7fr 1fr .4fr .2fr;
+    }
     #contact-form {
         padding: 10px 0;
     }
@@ -405,13 +423,68 @@ footer p {
         grid-gap: 0px;
         align-items: center;
     }
-    .slider {
-        overflow: visible;
-    }
+    
     #prev {
         display: none
     }
     #next {
         display: none;
     }
-}
+    #about article {
+        font-size: 1.3em;
+        padding: 25px;
+    }
+    #about {
+        opacity: 1;
+        /* display:none; */
+    }
+    #contact-name {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2 ;
+    }
+    #contact-email {
+        grid-column: 2 / 3;
+        grid-row:  1 / 2;
+    }
+    #message-area {
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
+    }
+    .inside {
+        display: flex;
+        /* grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr; */
+    }
+    /* #show-me {
+        display: inline ;
+    } */
+    .pro1, .pro2, .pro3 {
+        display: grid; 
+        grid-template-rows: 1fr;
+        background: #FFE66D;
+        padding: 10px;
+        margin: 10px;    
+    }
+    h3 {
+        font-size: 1em;
+        justify-self: center;
+    }
+    .project-menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1.3fr;
+                
+    }
+    .project-menu p {
+        font-size: .6em;
+        justify-self: center;
+        align-self: center;
+    }
+    .more-button {
+        font-size: .7em;
+        justify-self: center;
+        background: #000000;
+        color: #ffffff;
+        padding: 8px 10px;
+    }
+} 
