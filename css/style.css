@@ -11,7 +11,7 @@ body {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  opacity: 0.1;
+  opacity: 0;
   width: 60px;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
@@ -74,13 +74,14 @@ section:first-of-type {
 }
 #top-section {
   justify-self: start;
+  align-self:end;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  margin: -65px 0 160px 0;
+  margin: 0px 0 100px 0;
 }
 #top-section h1 {
   font-weight: 900;
-  font-size: 8em;
+  font-size: 7.2em;
   letter-spacing: -4px;
   line-height: 60px;
 }
@@ -268,11 +269,17 @@ footer p {
   #main-content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr 3fr 2.3fr;
+    grid-template-rows: 3fr 1fr 2.7fr 2.3fr;
     grid-gap: 0px;
     align-items: center;
     margin-bottom: 40px;
-    padding: 0 20px;
+    padding: 0 90px;
+  }
+  #arrow-up {
+      right: 10px;
+  }
+  #arrow-down {
+      right: 10px;
   }
   section {
     text-align: center;
@@ -285,7 +292,6 @@ footer p {
     align-self: center;
     writing-mode: horizontal-tb;
     text-orientation: mixed;
-    margin: 50px auto 0 auto;
   }
   #tagline {
     display: inline-block;
@@ -308,13 +314,29 @@ footer p {
     padding: 35px;
     display: none;
   }
+ 
   #slider {
     display: none;
   }
   .project-menu {
     font-size: 1.3em;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+  } 
+  .more-button {
+    justify-self: center;
   }
+  .project-menu p {
+    justify-self: center;  
+  }
+  h3 {
+    justify-self: center;
+    margin-top: 10px;
+  }
+
   #contact {
     display: grid;
     grid-template-rows: 0.5fr 0.7fr 1fr 0.4fr 0.2fr;

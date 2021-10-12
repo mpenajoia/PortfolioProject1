@@ -53,12 +53,22 @@ $win.on("scroll", function () {
     $upArrow.fadeTo(600, 0, function () {});
     topArrowVis = false;
   }
-  if (topArrowVis && $top >= 1750) {
+  if (topArrowVis && $top >= 1800) {
     $upArrow.css("bottom", "130px");
   } else {
     $upArrow.css("bottom", "90px");
   }
 });
+// function to delay the loading of the down arrow
+function arrowLoad() {
+  $("#arrow-down").delay(500).animate(
+    {
+      opacity: .1,
+    },
+    1000
+  );
+}
+arrowLoad();
 
 let downArrowVis = true;
 // function that is evoked when the window is scrolled
