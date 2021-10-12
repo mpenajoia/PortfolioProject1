@@ -227,10 +227,25 @@ function nextProj () {
 nextProj();
 
 function tagLine () {
-    $('#tagline').delay(800).animate({
+    $('#tagline').delay(500).animate({
         opacity: 1
-    }, 1500)
+    }, 1000)
 }
 tagLine();
 
 
+let $aboutVis = false;
+let $projectVis = false;
+let $contactVis = false;
+$(window).on('scroll', function (){
+    let $theDrop = $(window).scrollTop()
+    if(!$aboutVis && $theDrop >= 400){
+        $('#about-me').slideDown(500)
+    }
+    if(!$projectVis && $theDrop >= 950){
+        $('#slider').slideDown(500)
+    }
+    if(!$contactVis && $theDrop >= 1900){
+        $('#contact-form').slideDown(500)
+    }
+})
