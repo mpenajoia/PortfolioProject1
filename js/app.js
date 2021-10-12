@@ -155,7 +155,7 @@ $win.on('scroll', function(){
         $upArrow.fadeTo(600, 0, function(){});
         topArrowVis = false;
     }
-    if(topArrowVis && $top >= 1700){
+    if(topArrowVis && $top >= 1850){
         $upArrow.css('bottom', '130px')
     }else{
         $upArrow.css('bottom', '90px')
@@ -171,11 +171,11 @@ $win.on('scroll', function(){
     const $top = $win.scrollTop();
     // console.log($top);
 
-    if(!downArrowVis && $top >= 1600){
+    if(!downArrowVis && $top >= 1700){
         $downArrow.fadeTo(600, 0, function(){});
         downArrowVis = true;
     }
-    if(downArrowVis && $top < 1600){
+    if(downArrowVis && $top < 1700){
         $downArrow.fadeTo(600, 0.1, function(){});
         downArrowVis = false;
     }
