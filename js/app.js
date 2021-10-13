@@ -1,39 +1,40 @@
 // Contact Form Below
-function sendForm(event) {
-  event.preventDefault();
-  const $name = $("#contact-name").val();
-  const $email = $("#contact-email").val();
-  const $message = $("#message-area").val();
-  const $feedback = $("#feedback");
-  const $blank404 = $("<p>")
-    .css({ color: "red" })
-    .text("Please fill out all fields.");
-  const $success = $("<p>").text("Got it, thanks.");
-  if (!$name && !$email && !$message) {
-    $feedback.prepend($blank404);
-    $feedback.fadeOut(2000);
-  } else {
-    const $serial = $("#contact-form").serializeArray();
-    $.ajax({
-      url: "https://api.apispreadsheets.com/data/19236/",
-      type: "post",
-      data: $("#contact-form").serializeArray(),
-      success: function () {
-        $("#feedback").prepend($success);
-        $("#contact-name").val("");
-        $("#contact-email").val("");
-        $("#message-area").val("");
-        $feedback.fadeOut(2000);
-      },
-      error: function () {
-        $feedback.prepend(
-          $("<p>").text("This mailbox is now full, try again later.")
-        );
-      },
-    });
+$('#send-button').on('click',
+  function sendForm(event) {
+    event.preventDefault();
+    const $name = $("#contact-name").val();
+    const $email = $("#contact-email").val();
+    const $message = $("#message-area").val();
+    const $feedback = $("#feedback");
+    const $blank404 = $("<p>")
+      .css({ color: "red" })
+      .text("Please fill out all fields.");
+    const $success = $("<p>").text("Got it, thanks.");
+    if (!$name && !$email && !$message) {
+      $feedback.prepend($blank404);
+      $feedback.fadeOut(2000);
+    } else {
+      const $serial = $("#contact-form").serializeArray();
+      $.ajax({
+        url: "https://api.apispreadsheets.com/data/19236/",
+        type: "post",
+        data: $("#contact-form").serializeArray(),
+        success: function () {
+          $("#feedback").prepend($success);
+          $("#contact-name").val("");
+          $("#contact-email").val("");
+          $("#message-area").val("");
+          $feedback.fadeOut(2000);
+        },
+        error: function () {
+          $feedback.prepend(
+            $("<p>").text("This mailbox is now full, try again later.")
+          );
+        },
+      });
+    }
   }
-}
-
+)
 const $downArrow = $("#arrow-down");
 const $upArrow = $("#arrow-up");
 const $upArrowOn = $upArrow.css({ opacity: 0.1 });
@@ -96,7 +97,6 @@ function initMap() {
     center: location,
   });
 }
-
 // project slider controls
 function nextProj() {
   $("#next").on("click", function () {

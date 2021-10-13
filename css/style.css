@@ -7,8 +7,11 @@ body {
   font-family: "Heebo", sans-serif;
   position: relative;
 }
+a {
+  color: #000000;
+}
 a:visited {
-    color: #000000;
+  color: #000000;
 }
 #arrow-down {
   position: fixed;
@@ -77,16 +80,20 @@ section:first-of-type {
 }
 #top-section {
   justify-self: start;
-  align-self:end;
+  align-self: end;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   margin: 0px 0 100px 0;
+  position:relative;
 }
 #top-section h1 {
   font-weight: 900;
   font-size: 7.2em;
   letter-spacing: -4px;
   line-height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 133px;
 }
 #tagline {
   display: none;
@@ -101,23 +108,23 @@ h2 {
   padding: 20px;
 }
 #about-me {
-    display:none;
+  display: none;
 }
 .tech-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px 0;
 }
 .languages {
-    display: none;
-    width: 10%;
+  display: none;
+  width: 10%;
 }
 #slider {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  display:none;
+  display: none;
 }
 #prev {
   position: absolute;
@@ -233,6 +240,11 @@ textarea {
   padding: 10px;
   font-size: 1em;
 }
+input:focus, textarea:focus {
+  outline: none;
+  background: #fede40;
+}
+
 #contact-form {
   display: grid;
   grid-template-rows: 1fr 1fr 3fr;
@@ -252,6 +264,9 @@ textarea {
   border: none;
   padding: 10px 20px;
   height: 50%;
+}
+#send-button:active {
+  background: #ffe66d;
 }
 footer {
   display: flex;
@@ -293,10 +308,10 @@ footer p {
     padding: 0 90px;
   }
   #arrow-up {
-      right: 10px;
+    right: 10px;
   }
   #arrow-down {
-      right: 10px;
+    right: 10px;
   }
   section {
     text-align: center;
@@ -310,10 +325,16 @@ footer p {
     writing-mode: horizontal-tb;
     text-orientation: mixed;
   }
+  #top-section h1 {
+    position: relative;
+    top: 0;
+  }
   #tagline {
-    display: inline-block;
-    position: absolute;
-    right: 0;
+    display: inline;
+    position: relative;
+    float: right;
+    bottom: 5px;
+    right: -37px;
     opacity: 0;
     font-weight: 900;
     font-size: 2em;
@@ -336,11 +357,11 @@ footer p {
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 20px 0;
-}
-.languages {
+  }
+  .languages {
     display: none;
     width: 75px;
-}
+  }
   #slider {
     display: none;
   }
@@ -351,12 +372,12 @@ footer p {
     bottom: 0;
     width: 100%;
     padding: 0;
-  } 
+  }
   .more-button {
     justify-self: center;
   }
   .project-menu p {
-    justify-self: center;  
+    justify-self: center;
   }
   h3 {
     justify-self: center;
@@ -395,7 +416,7 @@ footer p {
     align-items: center;
   }
   a:visited {
-    color: #FFFFFF;
+    color: #ffffff;
   }
   #prev {
     display: none;
@@ -463,7 +484,7 @@ footer p {
     align-self: center;
   }
   .project-images {
-      grid-row: 1 / 3;
+    grid-row: 1 / 3;
   }
   .more-button {
     font-size: 0.7em;
@@ -473,6 +494,6 @@ footer p {
     padding: 8px 10px;
   }
   #feedback {
-      justify-self: end;
+    justify-self: end;
   }
 }
