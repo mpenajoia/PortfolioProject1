@@ -267,12 +267,12 @@ input:focus, textarea:focus {
 #send-button:active {
   background: #ffe66d;
 }
-footer {
+#foot {
   display: flex;
   flex-flow: column wrap;
   background: #000000;
 }
-footer ul {
+#foot ul {
   display: flex;
   list-style-type: none;
   justify-content: center;
@@ -280,7 +280,7 @@ footer ul {
   padding: 0;
   height: 80px;
 }
-footer ul li {
+#foot ul li {
   margin: 0 10px;
   height: 100%;
 }
@@ -289,7 +289,7 @@ footer ul li {
   margin: 8px auto;
   width: 50%;
 }
-footer p {
+#foot p {
   color: #ffffff;
   text-align: center;
   padding: 10px 0;
@@ -339,18 +339,6 @@ footer p {
     from { width:0 }
     to { width:100% }
   }
-
-  /* .reveal-about {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: revealabout .8s steps(5, end) forwards;
-    width:0;
-  }
-  @keyframes revealabout {
-    from { width:0 }
-    to { width:100% }
-  } */
   #tagline {
     display: inline;
     position: relative;
@@ -521,5 +509,11 @@ footer p {
   }
   #feedback {
     justify-self: end;
+  }
+  #arrow-up {
+    right: 40px;
+  }
+  #arrow-down {
+    right: 40px;
   }
 }
