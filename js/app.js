@@ -152,3 +152,22 @@ $(window).on("scroll", function () {
 //     $("#contact-form").slideDown(500);
 //   }
 });
+
+//------------//
+
+// console.log($(document).height());
+// console.log($(window).height());
+// console.log($(window).scrollTop());
+
+//   const $winHeight = $(window).height();
+//   const $docHeight = $(document).height();
+  
+//   $(window).on("scroll", function () {
+//     const $fromTop = $(window).scrollTop();
+//     if(($fromTop / $docHeight) > .15 && ($fromTop / $docHeight) <= .24){
+//       console.log('great success', $fromTop / $docHeight)
+//     }else{
+//       console.log('sorry homie')
+//     }
+//   })
+
