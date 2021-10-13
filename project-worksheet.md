@@ -42,13 +42,13 @@ The goal of this project is to use HTML, CSS, JS, and jQuery to build a mobile f
 #### MVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Layout/Structure | H | 3hr | 4hr |
-| Responsive-ness | H | 3hr | 5.5hr |
+| Layout/Structure | H | 3hr | 4.5hr |
+| Responsive-ness | H | 3hr | 6hr |
 | Contact Form | H | 1hr | 3hr |  
 | Social Icons | L | 1.5hr|  .5hr | 
 | Aesthetics | H | 3hr | 1hr |
 |jQuery animation on Arrow | H | 3hr | 3hr |
-| Total | H | 15.5hrs| 17hrs |
+| Total | H | 15.5hrs| 18hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |

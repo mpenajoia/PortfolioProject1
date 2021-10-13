@@ -75,11 +75,11 @@ let downArrowVis = true;
 $win.on("scroll", function () {
   const $top = $win.scrollTop();
 
-  if (!downArrowVis && $top >= 1700) {
+  if (!downArrowVis && $top >= 1850) {
     $downArrow.fadeTo(600, 0, function () {});
     downArrowVis = true;
   }
-  if (downArrowVis && $top < 1700) {
+  if (downArrowVis && $top < 1850) {
     $downArrow.fadeTo(600, 0.1, function () {});
     downArrowVis = false;
   }
@@ -119,7 +119,7 @@ function nextProj() {
   });
 }
 nextProj();
-
+// function to make tagline appear after half a second of page loading
 function tagLine() {
   $("#tagline").delay(500).animate(
     {
@@ -138,13 +138,14 @@ $(window).on("scroll", function () {
   if (!$aboutVis && $theDrop >= 400) {
     $("#about-me").slideDown(500);
   }
-  if (!$aboutVis && $theDrop >= 475){
+  if (!$aboutVis && $theDrop >= 455){
     $('.languages').show(500);
   }
   if (!$projectVis && $theDrop >= 950) {
     $("#slider").slideDown(500);
   }
-  if (!$contactVis && $theDrop >= 1900) {
-    $("#contact-form").slideDown(500);
-  }
+  
+//   if (!$contactVis && $theDrop >= 1900) {
+//     $("#contact-form").slideDown(500);
+//   }
 });
