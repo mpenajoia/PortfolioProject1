@@ -11,8 +11,9 @@ $('#send-button').on('click',
       .text("Please fill out all fields.");
     const $success = $("<p>").text("Got it, thanks.");
     if (!$name && !$email && !$message) {
-      $feedback.prepend($blank404);
-      $feedback.fadeOut(2000);
+      const $error = $feedback.prepend($blank404);
+      $error;
+      $blank404.fadeOut(2000);
     } else {
       const $serial = $("#contact-form").serializeArray();
       $.ajax({
@@ -20,11 +21,11 @@ $('#send-button').on('click',
         type: "post",
         data: $("#contact-form").serializeArray(),
         success: function () {
-          $("#feedback").prepend($success);
+          const $successMes = $("#feedback").prepend($success);
           $("#contact-name").val("");
           $("#contact-email").val("");
           $("#message-area").val("");
-          $feedback.fadeOut(2000);
+          $success.fadeOut(2000);
         },
         error: function () {
           $feedback.prepend(

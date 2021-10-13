@@ -415,6 +415,9 @@ footer p {
     grid-gap: 0px;
     align-items: center;
   }
+  #top-section {
+    top: 20%;
+  }
   a:visited {
     color: #ffffff;
   }
