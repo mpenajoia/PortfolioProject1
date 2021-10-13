@@ -332,7 +332,7 @@ input:focus, textarea:focus {
   .reveal-h1 {
     overflow: hidden;
     white-space: nowrap;
-    animation: reveal .8s steps(11, end) forwards;
+    animation: reveal .7s steps(11, end) forwards;
     width:0;
   }
   @keyframes reveal {
@@ -343,8 +343,8 @@ input:focus, textarea:focus {
     display: inline;
     position: relative;
     float: right;
-    bottom: 53px;
-    right: -37px;
+    bottom: 58px;
+    right: -42px;
     opacity: 0;
     font-weight: 900;
     font-size: 2em;

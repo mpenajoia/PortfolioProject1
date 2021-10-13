@@ -72,6 +72,7 @@ function arrowLoad() {
 }
 arrowLoad();
 
+
 let downArrowVis = true;
 // function that is evoked when the window is scrolled
 $win.on("scroll", function () {
@@ -120,9 +121,10 @@ function nextProj() {
   });
 }
 nextProj();
+
 // function to make tagline appear after half a second of page loading
 function tagLine() {
-  $("#tagline").delay(800).animate(
+  $("#tagline").delay(1000).animate(
     {
       opacity: 1,
     },
