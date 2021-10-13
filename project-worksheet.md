@@ -118,3 +118,5 @@ The biggest head scratcher was due to the 402 error from the APISPREADSHEETS.com
 - [CSS Tricks Flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 - [CSS Tricks Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+- [CSS Animation for text reveal](https://www.sitepoint.com/css-typewriter-effect/?utm_source=tldrnewsletter)

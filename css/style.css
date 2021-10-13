@@ -90,9 +90,8 @@ section:first-of-type {
   font-weight: 900;
   font-size: 7.2em;
   letter-spacing: -4px;
-  line-height: 60px;
   position: absolute;
-  left: 0px;
+  left: -50px;
   top: 133px;
 }
 #tagline {
@@ -328,12 +327,35 @@ footer p {
   #top-section h1 {
     position: relative;
     top: 0;
+    left: 0;
   }
+  .reveal-h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: reveal .8s steps(11, end) forwards;
+    width:0;
+  }
+  @keyframes reveal {
+    from { width:0 }
+    to { width:100% }
+  }
+
+  /* .reveal-about {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: revealabout .8s steps(5, end) forwards;
+    width:0;
+  }
+  @keyframes revealabout {
+    from { width:0 }
+    to { width:100% }
+  } */
   #tagline {
     display: inline;
     position: relative;
     float: right;
-    bottom: 5px;
+    bottom: 53px;
     right: -37px;
     opacity: 0;
     font-weight: 900;
@@ -372,6 +394,7 @@ footer p {
     bottom: 0;
     width: 100%;
     padding: 0;
+    opacity: .9;
   }
   .more-button {
     justify-self: center;

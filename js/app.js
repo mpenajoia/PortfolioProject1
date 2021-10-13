@@ -63,7 +63,7 @@ $win.on("scroll", function () {
 });
 // function to delay the loading of the down arrow
 function arrowLoad() {
-  $("#arrow-down").delay(500).animate(
+  $("#arrow-down").delay(800).animate(
     {
       opacity: .1,
     },
@@ -122,7 +122,7 @@ function nextProj() {
 nextProj();
 // function to make tagline appear after half a second of page loading
 function tagLine() {
-  $("#tagline").delay(500).animate(
+  $("#tagline").delay(800).animate(
     {
       opacity: 1,
     },
@@ -130,7 +130,7 @@ function tagLine() {
   );
 }
 tagLine();
-
+//functions to default to hiding about and project content until a certain scroll height to animate a reveal
 let $aboutVis = false;
 let $projectVis = false;
 let $contactVis = false;
