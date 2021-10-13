@@ -97,6 +97,10 @@ h2 {
   background: #ffe66d;
   padding: 20px;
 }
+.tech-skills {
+    display: none;
+}
+
 #slider {
   width: 100%;
   margin: 0 auto;
@@ -314,7 +318,16 @@ footer p {
     padding: 35px;
     display: none;
   }
- 
+  .tech-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+.languages {
+    display: none;
+    width: 75px;
+}
   #slider {
     display: none;
   }

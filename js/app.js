@@ -138,6 +138,9 @@ $(window).on("scroll", function () {
   if (!$aboutVis && $theDrop >= 400) {
     $("#about-me").slideDown(500);
   }
+  if (!$aboutVis && $theDrop >= 475){
+    $('.languages').show(500);
+  }
   if (!$projectVis && $theDrop >= 950) {
     $("#slider").slideDown(500);
   }
