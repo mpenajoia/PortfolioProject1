@@ -8,13 +8,13 @@
 |Day 1| Wireframes / Priority Matrix / Timeline | Complete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Complete
 |Day 4| MVP & Bug Fixes | Complete
-|Day 5| Final Touches | Incomplete
+|Day 5| Final Touches | Complete
 |Day 6| Present | Incomplete
 
 
 ## Project Description
 
-The goal of this project is to use HTML, CSS, JS, and jQuery to build a mobile focused portfolio to showcase projects/websites I've built (or will build). The final product will be simple, aesthetically pleasing, intuitive, and adaptable to any screen size. I intend to display all content ona single page layout feature some minimal animation and a image slider/carousel to display projects in at least one of the media query sizes. 
+The goal of this project is to use HTML, CSS, JS, and jQuery to build a mobile focused portfolio to showcase projects/websites I've built (or will build). The final product will be simple, aesthetically pleasing, intuitive, and adaptable to any screen size. I intend to display all content on a single page layout featuring some minimal animation and an image slider to display projects in at least one of the media query sizes. 
 
 ## Inspiration
 
@@ -43,13 +43,15 @@ The goal of this project is to use HTML, CSS, JS, and jQuery to build a mobile f
 #### MVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Layout/Structure | H | 3hr | 4.5hr |
-| Responsive-ness | H | 3hr | 6hr |
+| Layout/Structure | H | 3hr | 5hr |
+| Responsive-ness | H | 3hr | 6.5hr |
 | Contact Form | H | 1hr | 3hr |  
 | Social Icons | L | 1.5hr|  .5hr | 
-| Aesthetics | H | 3hr | 1hr |
+| Aesthetics | H | 3hr | 2hr |
 |jQuery animation on Arrow | H | 3hr | 3hr |
-| Total | H | 15.5hrs| 18hrs |
+| Total | H | 15.5hrs| 20hrs* |
+
+*time may vary
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
@@ -103,6 +105,8 @@ $win.on('scroll', function(){
 
 ## Issues and Resolutions
 The biggest head scratcher was due to the 402 error from the APISPREADSHEETS.com approach to tieing a Google Sheet to the contact form submissions. Resolution was to wait 24 hours..
+
+
 
 ## Resources
 
