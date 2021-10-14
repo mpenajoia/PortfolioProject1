@@ -197,6 +197,9 @@ h2 {
 .pro3 img {
   width: 100%;
 }
+.img-link {
+  display:contents;
+}
 .project-menu {
   display: grid;
   grid-template-columns: 1fr;
