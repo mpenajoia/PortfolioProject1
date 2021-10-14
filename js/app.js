@@ -138,19 +138,19 @@ let $projectVis = false;
 let $contactVis = false;
 $(window).on("scroll", function () {
   let $theDrop = $(window).scrollTop();
-  if (!$aboutVis && $theDrop >= 400) {
+  if (!$aboutVis && $theDrop >= 370) {
     $("#about-me").slideDown(500);
   }
-  if (!$aboutVis && $theDrop >= 455){
+  if (!$aboutVis && $theDrop >= 425){
     $('.languages').show(500);
   }
   if (!$projectVis && $theDrop >= 950) {
     $("#slider").slideDown(500);
   }
   
-//   if (!$contactVis && $theDrop >= 1900) {
-//     $("#contact-form").slideDown(500);
-//   }
+  // if (!$contactVis && $theDrop >= 1200) {
+  //   $("#map").fadeIn(600);
+  // }
 });
 
 //------------//
