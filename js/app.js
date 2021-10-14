@@ -171,3 +171,18 @@ $(window).on("scroll", function () {
 //     }
 //   })
 
+// this function, in theory, was an attempt to go down the route of having a method 
+// that was triggered when the browser window size was changed and then run a conditional 
+// to confirm what size the user was viewing by checking on a particular css value of an
+// element's ID that happens to be unique per screen size, per media query. Next steps would 
+// be to implement the function about that controls the slideDown methods based on document 
+// height however I can already forsee that the function below would not be triggered if the 
+// user arrives to the website without ever making any adjustment to the size of their window. 
+// $(window).resize(function(){
+  
+//   if(($('#arrow-down').css('right') === '40px')){
+//     console.log('this is the desktop view')
+//   }else{
+//     console.log('this is not the desktop version')
+//   }
+// })

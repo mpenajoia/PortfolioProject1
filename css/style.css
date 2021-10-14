@@ -219,6 +219,7 @@ h3 {
   justify-self: end;
   margin-bottom: 5px;
 }
+
 article p {
   font-size: 0.9em;
   align-self: end;
@@ -514,6 +515,9 @@ input:focus, textarea:focus {
     color: #ffffff;
     padding: 8px 10px;
   }
+  .more-button:active {
+    transform: scale(.9)
+  } 
   #feedback {
     justify-self: end;
   }
@@ -524,3 +528,6 @@ input:focus, textarea:focus {
     right: 40px;
   }
 }
+
+
+ 
