@@ -88,17 +88,17 @@ $win.on("scroll", function () {
   }
 });
 
-//Google Map API integration
-//function to initialize map
-function initMap() {
-  // location of my area
-  const location = { lat: 34.112, lng: -118.193 };
-  // variable to 'put' map on DOM
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
-    center: location,
-  });
-}
+// //Google Map API integration
+// //function to initialize map
+// function initMap() {
+//   // location of my area
+//   const location = { lat: 34.112, lng: -118.193 };
+//   // variable to 'put' map on DOM
+//   const map = new google.maps.Map(document.getElementById("map"), {
+//     zoom: 12,
+//     center: location,
+//   });
+// }
 // project slider controls
 function nextProj() {
   $("#next").on("click", function () {
